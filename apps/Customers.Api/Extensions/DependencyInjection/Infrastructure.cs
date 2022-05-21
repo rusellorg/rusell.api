@@ -1,4 +1,5 @@
 using MediatR;
+using MongoDB.Bson.Serialization.Conventions;
 using Rusell.Customers.Domain;
 using Rusell.Customers.Infrastructure.Persistence;
 using Rusell.Shared.Domain.Repository.Mongo;
@@ -15,6 +16,13 @@ public static class Infrastructure
 
         services.AddMediatR(typeof(Program));
         services.AddMediatR(AssemblyHelper.GetInstance(Assemblies.Customers));
+
+        var conventionPack = new ConventionPack
+        {
+            new CamelCaseElementNameConvention()
+        };
+        ConventionRegistry.Register("camelCase", conventionPack, _ => true);
+
 
         return services;
     }
