@@ -2,6 +2,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Rusell.Customers.Application.Create;
+using Rusell.Customers.Application.Find;
 
 namespace Customers.Api.Controllers;
 
@@ -28,5 +29,13 @@ public class CustomerController : ControllerBase
         {
             return BadRequest(e.Message);
         }
+    }
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetCustomer(string id)
+    {
+        var customer = await _mediator.Send(new FindCustomerQuery(id));
+
+        return (customer == null) ? NotFound() : Ok(customer);
+      
     }
 }
