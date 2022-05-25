@@ -44,6 +44,6 @@ public class CustomerController : ControllerBase
     public async Task<IActionResult> GetCustomers([FromQuery]SearchAllCustomersQuery query)
     {
         var customers = await _mediator.Send(query);
-        return Ok(customers);
+        return (customers == null) ? NotFound() : Ok(customers);
     }
 }
