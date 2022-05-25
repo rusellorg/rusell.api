@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Rusell.Customers.Application.Create;
 using Rusell.Customers.Application.Find;
+using Rusell.Customers.Application.SearchAll;
 
 namespace Customers.Api.Controllers;
 
@@ -37,5 +38,12 @@ public class CustomerController : ControllerBase
 
         return (customer == null) ? NotFound() : Ok(customer);
       
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetCustomers([FromQuery]SearchAllCustomersQuery query)
+    {
+        var customers = await _mediator.Send(query);
+        return Ok(customers);
     }
 }
