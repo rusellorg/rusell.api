@@ -1,5 +1,7 @@
 using MediatR;
 using MongoDB.Bson.Serialization.Conventions;
+using Rusell.Routes.Domain;
+using Rusell.Routes.Infrastructure.Persistence;
 using Rusell.Shared.Domain.Repository.Mongo;
 using Rusell.Shared.Helpers;
 
@@ -10,7 +12,7 @@ public static class Infrastructure
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<MongoDbSettings>(configuration.GetSection("MongoDbSettings"));
-        //services.AddScoped<IRouteRepository, MongoDbRouteRepository>();
+        services.AddScoped<IRouteRepository, MongoDbRouteRepository>();
 
         services.AddMediatR(typeof(Program));
         services.AddMediatR(AssemblyHelper.GetInstance(Assemblies.Routes));
