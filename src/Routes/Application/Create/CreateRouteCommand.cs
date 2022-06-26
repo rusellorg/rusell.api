@@ -6,6 +6,6 @@ public record CreateRouteCommand(
     string From, 
     string To, 
     decimal Cost, 
-    bool IsCustomPicked, 
-    bool IsCustomDroppedOffAtHome, 
+    bool IsCustomerPickedUpAtHome, 
+    bool IsCustomerDroppedOffAtHome, 
     string CompanyId) : Command;

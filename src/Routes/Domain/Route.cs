@@ -16,7 +16,7 @@ public class Route
     public string From { get; set; } = default!;
     public string To { get; set; } = default!;
     public decimal Cost { get; set; } = default!;
-    public bool IsCustomPicked { get; set; } = default!;
-    public bool IsCustomDroppedOffAtHome { get; set; } = default!;
+    public bool IsCustomerPickedUpAtHome { get; set; } = default!;
+    public bool IsCustomerDroppedOffAtHome { get; set; } = default!;
     public string CompanyId { get; set; } = default!;
 }
