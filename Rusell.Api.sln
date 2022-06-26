@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers", "src\Customers\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customers.Api", "apps\Customers.Api\Customers.Api.csproj", "{E490356F-6161-4EE8-987C-28FF571763D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Companies", "src\Companies\Companies.csproj", "{06D6A2B5-8152-43C0-88A8-FBCCEAD856F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,7 @@ Global
 		{589A0CC6-BD25-4A55-AEB6-A680FA9002FD} = {84268000-7CD8-4384-827B-8BA0827F482D}
 		{0A71F0B2-438D-45D0-B52A-9CA7428D6EFA} = {84268000-7CD8-4384-827B-8BA0827F482D}
 		{E490356F-6161-4EE8-987C-28FF571763D4} = {323C172E-9933-4B14-AB54-C181C55BF0C6}
+		{06D6A2B5-8152-43C0-88A8-FBCCEAD856F7} = {84268000-7CD8-4384-827B-8BA0827F482D}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{589A0CC6-BD25-4A55-AEB6-A680FA9002FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -35,5 +38,9 @@ Global
 		{E490356F-6161-4EE8-987C-28FF571763D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E490356F-6161-4EE8-987C-28FF571763D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E490356F-6161-4EE8-987C-28FF571763D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06D6A2B5-8152-43C0-88A8-FBCCEAD856F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06D6A2B5-8152-43C0-88A8-FBCCEAD856F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06D6A2B5-8152-43C0-88A8-FBCCEAD856F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06D6A2B5-8152-43C0-88A8-FBCCEAD856F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
